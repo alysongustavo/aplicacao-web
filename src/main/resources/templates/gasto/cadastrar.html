@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/layoutPadrao">
+<head></head>
+<body>
+<div layout:fragment="conteudo">
+    <div class="col-md-12">
+        <div class="box">
+            <div class="box-header">
+                <h2>Informe os Dados de Cadastro</h2>
+            </div>
+            <div class="box-divider m-a-0"></div>
+            <div class="box-body">
+                <form role="form" method="POST" th:object="${gasto}">
+
+                    <div class="form-group row">
+                        <label for="inputPessoa" class="col-sm-2 form-control-label">Informe a Pessoa</label>
+                        <div class="col-sm-10">
+                            <select class="form-control c-select" id="inputPessoa">
+                                <option>Selecione a Pessoa</option>
+                                <option th:each="pessoa : ${pessoas}" th:value="${pessoa.id}" th:text="${pessoa.name}">Pale lager</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputDescription" class="col-sm-2 form-control-label">Descrição</label>
+                        <div class="col-sm-10">
+                            <textarea id="inputDescription" class="form-control" rows="2" th:field="*{description}"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputData">Data</label>
+                        <input type="email" class="form-control" id="exampleInputData" placeholder="Data" th:field="*{dtHour}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputValor">Valor</label>
+                        <input type="email" class="form-control" id="exampleInputValor" placeholder="Valor" th:field="*{value}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputTags">Tags</label>
+                        <input type="email" class="form-control" id="exampleInputTags" placeholder="Tags" th:field="*{tags}">
+                    </div>
+
+                    <button type="submit" class="btn white m-b">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

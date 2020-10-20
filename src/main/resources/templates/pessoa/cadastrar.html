@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/layoutPadrao">
+<head></head>
+<body>
+<div layout:fragment="conteudo">
+    <div class="col-md-12">
+        <div class="box">
+            <div class="box-header">
+                <h2>Informe os Dados de Cadastro</h2>
+            </div>
+            <div class="box-divider m-a-0"></div>
+            <div class="box-body">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="exampleInputNome">Nome</label>
+                        <input type="email" class="form-control" id="exampleInputNome" placeholder="Nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputCPF">CPF</label>
+                        <input type="email" class="form-control" id="exampleInputCPF" placeholder="CPF">
+                    </div>
+
+                    <button type="submit" class="btn white m-b">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
